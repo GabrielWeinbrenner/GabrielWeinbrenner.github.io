@@ -3,7 +3,7 @@
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <title>Gabriel weinbrenner</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
@@ -28,33 +28,60 @@
                 font-size: 3.5rem;
             }
         }
+
+        .card .img-top {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+            -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            /* ...and now for the proper property */
+            transition: .5s ease-out;
+        }
+
+        .card:hover .img-top {
+            display: inline;
+
+        }
     </style>
     <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light rounded">
         <a class="navbar-brand" href="#">Gabriel Weinbrenner</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09"
-            aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarsExample09">
+        <div class="float-right collapse navbar-collapse ">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Developer</a>
+                    <a class="nav-link" href="#About">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Instructor</a>
+                    <a class="nav-link" href="#Experience">Experience</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Activist</a>
+                    <a class="nav-link" href="#Developer">Developer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Instructor">Instructor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Volunteer</a>
                 </li>
             </ul>
         </div>
     </nav>
     <main role="main">
+        <!-- Carousel Section -->
+
         <div id="myCarousel" class="carousel slide pointer-event" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -68,6 +95,7 @@
                     </div>
                     <div class="container">
                         <div class="carousel-caption">
+                            <h2>I am Gabriel</h2>
                             <h1>Instructor.</h1>
                         </div>
                     </div>
@@ -78,6 +106,7 @@
                     </div>
                     <div class="container">
                         <div class="carousel-caption">
+                            <h2>I am Gabriel</h2>
                             <h1>Developer.</h1>
                         </div>
                     </div>
@@ -85,6 +114,7 @@
                 <div class="carousel-item">
                     <div class="container">
                         <div class="carousel-caption">
+                            <h2>I am Gabriel</h2>
                             <h1>Volunteer.</h1>
                         </div>
                     </div>
@@ -99,84 +129,196 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <h1 class="text-center devtext">Developer.</h1>
-        <div class="album bg-light scroll developer">
-            <h2 class="text-center">Projects</h2>
+        <!-- About Page -->
+        <section id="About">
+            <div class="row devtext">
+                <div class="col">
+                    <hr>
+                </div>
+                <h1 class="col-auto">About</h1>
+                <div class="col">
+                    <hr>
+                </div>
+            </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
-                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    <div class="col">
+                        <p><b>Developer: </b> I continously explore the field of computer science. From artificial
+                            intelligence to natural language processing, I hope to continue expanding my knowledge on
+                            this
+                            topic. Recently, with my founding of easyNotam, I developed websites for local busineses
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p><b>Instructor: </b> With my current knowledge in computer sciecne, I hope to extend such
+                            experiences to others. When
+                            I teach my favorite subject;when I see a person finally understand a topic in computer
+                            science;
+                            when I continuously discover new topics while teaching--that is why
+                            I love instructing computer science. Everyday, with my recent experiences at Steamworks
+                            Studio,
+                            I teach elementry and middle school kids the foundations of computer science and extend my
+                            passion of this field. </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p><b>Volunteer: </b> I love to give back to the community. To see individuals with less than me
+                            sickens me. I hope to create an equal environemnt for all people</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="Experience">
+            <div class="row devtext">
+                <div class="col">
+                    <hr>
+                </div>
+                <h1 class="col-auto">Experience</h1>
+                <div class="col">
+                    <hr>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img src="img/easyNotam.jpg" width="300px" height="110px" />
+                        <h4>easyNotam, Web-Developer</h4>
+                        <p>June 2019 - Present</p>
+                    </div>
+                    <div class="col">
+                        <img src="img/steamworks.png" height="70px" />
+                        <h4>Steam Works Studio, STEM Instructor</h4>
+                        <p>June 2019 - Present</p>
+                    </div>
+                    <div class="col">
+                        <img src="img/jhonjhon.png" height="123px" />
+                        <h4>Jhon Jhon Institute, Multi Media Manager</h4>
+                        <p>June 2018 - Present</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Developer Section -->
+        <section id="Developer">
+            <div class="row devtext">
+                <div class="col">
+                    <hr>
+                </div>
+                <h1 class="col-auto">Developer</h1>
+                <div class="col">
+                    <hr>
+                </div>
+            </div>
+            <div class="album bg-light scroll developer">
+                <h2 class="text-center">Projects</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="bd-placeholder-img card" width="100%" height="225" src="img/spaceship.png">
+                                <div class="card-body">
+                                    <p class="card-text"><b>Flockin In Space</b>: A simulative solution to space trash
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href="https://github.com/GabrielWeinbrenner/Flocking_In_Space">
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-secondary">Github</button>
+                                            </a>
+                                            <button type="button"
+                                                class="btn btn-sm btn-outline-secondary">Devpost</button>
+                                        </div>
+                                        <small class="text-muted">March 2019</small>
                                     </div>
-                                    <small class="text-muted">9 mins</small>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
-                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="bd-placeholder-img card img-bot" width="100%" height="225"
+                                    src="img/uno.png" />
+                                <img class="bd-placeholder-img card img-top" width="100%" height="225"
+                                    src="img/uno.gif" />
+                                <div class="card-body">
+                                    <p class="card-text"><b>UNO</b>: A JavaFX program running the game UNO</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href="https://github.com/GabrielWeinbrenner/UNO-in-JAVA">
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-secondary">Github</button>
+                                            </a>
+                                        </div>
+                                        <small class="text-muted">June 2019</small>
                                     </div>
-                                    <small class="text-muted">9 mins</small>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
-                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="bd-placeholder-img card img-bot" width="100%" height="225"
+                                    src="img/Helix.png" />
+                                <img class="bd-placeholder-img card img-top" width="100%" height="225"
+                                    src="img/uno.gif" />
+                                <div class="card-body">
+                                    <p class="card-text"><b>Genetic Abnormality Tester</b>: A Computer Vision
+                                        application
+                                        used to detect genetic abnormalities</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href="https://github.com/GabrielWeinbrenner/UNO-in-JAVA">
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-secondary">Github</button>
+                                            </a>
+                                            <button type="button"
+                                                class="btn btn-sm btn-outline-secondary">Devpost</button>
+                                        </div>
+                                        <small class="text-muted">May 2019</small>
                                     </div>
-                                    <small class="text-muted">9 mins</small>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Instructor Page -->
+        <section id="Instructor">
+            <div class="row devtext">
+                <div class="col">
+                    <hr>
+                </div>
+                <h1 class="col-auto">Instructor</h1>
+                <div class="col">
+                    <hr>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="">STEM Instructor</h2>
+                    </div>
+                    <div class="col">
+                        <h2 class="">Author</h2>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
         <!-- FOOTER -->
         <footer class="container foot">
-            <p class="float-right"><a href="#">Back to top</a></p>
-            <p>© 2017-2019 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+            <p class="float-right">If you're interested in more information contact: <b>angelgabe101@gmail.com</b> <a
+                    href="#">Back to top</a></p>
+            <p>© 2019 Gabriel Weinbrenner</p>
         </footer>
     </main>
 </body>
